@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Performance Predictor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #c4fe4f, #feae00);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #333;
+        }
+
+        .container {
+            background-color: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 40px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        input[type="text"], select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #fe4f4f;
+            border: none;
+            color: white;
+            padding: 12px 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+
+        button:hover {
+            background-color: #f5890d;
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 14px;
+            color: #666;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Performance Predictor</h1>
+        <form action="/predict" method="post">
+            <label for="hours_studied">Hours Studied</label>
+            <input type="text" id="hours_studied" name="hours_studied" placeholder="Enter hours studied" required>
+
+            <label for="previous_scores">Previous Scores</label>
+            <input type="text" id="previous_scores" name="previous_scores" placeholder="Enter previous scores" required>
+
+            <label for="extracurricular">Extracurricular Activities</label>
+            <select id="extracurricular" name="extracurricular">
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+
+            <label for="sleep_hours">Sleep Hours</label>
+            <input type="text" id="sleep_hours" name="sleep_hours" placeholder="Enter sleep hours" required>
+
+            <label for="sample_papers">Sample Question Papers Practiced</label>
+            <input type="text" id="sample_papers" name="sample_papers" placeholder="Enter number of papers practiced" required>
+
+            <button type="submit">Predict</button>
+        </form>
+        <footer>
+            <p>Powered by Machine Learning</p>
+        </footer>
+    </div>
+</body>
+</html>
